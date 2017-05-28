@@ -1,0 +1,3 @@
+foobar(function ()
+         return
+       end)

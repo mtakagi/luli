@@ -1,0 +1,8 @@
+.PHONY: doc clean
+
+clean:
+	make clean
+
+doc: ../src/errorcode.rst
+	cp ../src/errorcode.rst source
+	make html

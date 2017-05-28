@@ -1,0 +1,4 @@
+[luli]
+
+ignore = E501, E1501, E1602
+spell-check = false

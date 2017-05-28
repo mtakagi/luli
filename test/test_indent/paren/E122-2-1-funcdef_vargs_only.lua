@@ -1,0 +1,5 @@
+function foobar(
+...
+)
+  print()
+end

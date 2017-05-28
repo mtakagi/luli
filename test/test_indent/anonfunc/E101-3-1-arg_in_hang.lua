@@ -1,0 +1,5 @@
+foobar(
+  function ()
+	print()
+  end
+)

@@ -1,0 +1,4 @@
+" ==========
+" syntastic
+" ==========
+let g:syntastic_lua_checkers = ['luli']
