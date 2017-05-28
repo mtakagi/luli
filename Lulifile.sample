@@ -1,0 +1,6 @@
+[luli]
+debug = true
+ignore = W33,W20,W5
+max-line-length = 90
+cocos = true
+limit = 10

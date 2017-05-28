@@ -1,0 +1,1 @@
+print(function () print() end)

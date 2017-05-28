@@ -1,0 +1,671 @@
+[
+    {
+        "category" : "style",
+        "num" : 101,
+        "type" : "Indent_with_mixed_chars",
+        "message" : "indentation contains mixed spaces and tabs",
+        "doc" : "インデントにスペースとタブが混在している"
+    },
+    {
+        "category" : "style",
+        "num" : 111,
+        "type" : "Invalid_indent_size",
+        "message" : "indentation is not a multiple of two spaces",
+        "doc" : "インデントサイズが 2 の倍数ではない"
+    },
+    {
+        "category" : "style",
+        "num" : 112,
+        "type" : "Indented_block_expected",
+        "message" : "expected an indented block",
+        "doc" : "インデントブロックがない"
+    },
+    {
+        "category" : "style",
+        "num" : 113,
+        "type" : "Unexpected_indent",
+        "message" : "unexpected indentation",
+        "doc" : "予期しないインデント"
+    },
+    {
+        "category" : "style",
+        "num" : 121,
+        "type" : "Continuation_line_invalid_indent_size",
+        "message" : "continuation line indentation is not a multiple of two spaces",
+        "doc" : "継続行のインデントサイズが 2 の倍数ではない"
+    },
+    {
+        "category" : "style",
+        "num" : 122,
+        "type" : "Continuation_line_missing_indent_or_outdented",
+        "message" : "continuation line missing indentation or outdented",
+        "doc" : "継続行のインデントが存在しない、またはインデントが戻されている"
+    },
+    {
+        "category" : "style",
+        "num" : 123,
+        "type" : "Closing_bracket_does_not_match_indent_of_opening_bracket_line",
+        "message" : "closing bracket does not match indentation of opening bracket's line",
+        "doc" : "吊り下げインデント時、閉じ括弧の行のインデントが開き括弧の行と揃っていない"
+    },
+    {
+        "category" : "style",
+        "num" : 124,
+        "type" : "Closing_bracket_does_not_match_visual_indent",
+        "message" : "closing bracket does not match visual indentation",
+        "doc" : "ビジュアルインデント時、閉じ括弧の位置が開き括弧と揃っていない"
+    },
+    {
+        "category" : "style",
+        "num" : 125,
+        "type" : "Continuation_line_does_not_distinguish_itself_from_next_logical_line",
+        "message" : "continuation line does not distinguish itself from next logical line",
+        "doc" : "継続行のインデントと論理行のインデントの区別がない"
+    },
+    {
+        "category" : "style",
+        "num" : 126,
+        "type" : "Continuation_line_over_indented_for_hanging_indent",
+        "message" : "continuation line over-indented for hanging indent",
+        "doc" : "吊り下げインデント時、継続行のインデントが多い"
+    },
+    {
+        "category" : "style",
+        "num" : 127,
+        "type" : "Continuation_line_over_indented_for_visual_indent",
+        "message" : "continuation line over-indented for visual indent",
+        "doc" : "ビジュアルインデント時、継続行のインデントが多い"
+    },
+    {
+        "category" : "style",
+        "num" : 128,
+        "type" : "Continuation_line_under_indented_for_visual_indent",
+        "message" : "continuation line under-indented for visual indent",
+        "doc" : "ビジュアルインデント時、継続行のインデントが少ない"
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 133,
+        "type" : "Closing_bracket_is_missing_indent",
+        "message" : "closing bracket is missing indentation",
+        "doc" : "閉じ括弧のインデントが欠けている"
+    },
+
+
+    {
+        "category" : "style",
+        "num" : 201,
+        "type" : "Whitespace_afterLBrack",
+        "message" : "whitespace after `$1'",
+        "doc" : "開き括弧の次にスペースが (1 つ以上) ある",
+        "param_types" : ["string"],
+        "param_doc" : ["開き括弧"]
+    },
+    {
+        "category" : "style",
+        "num" : 202,
+        "type" : "Whitespace_beforeRBrack",
+        "message" : "whitespace before `$1'",
+        "doc" : "閉じ括弧の前にスペースが (1 つ以上) ある",
+        "param_types" : ["string"],
+        "param_doc" : ["閉じ括弧"]
+    },
+    {
+        "category" : "style",
+        "num" : 203,
+        "type" : "Whitespace_before_sign",
+        "message" : "whitespace before `$1'",
+        "doc" : "記号の前にスペースが (1 つ以上) ある",
+        "param_types" : ["string"],
+        "param_doc" : ["記号"]
+    },
+    {
+        "category" : "style",
+        "num" : 204,
+        "type" : "Whitespace_after_sign",
+        "message" : "whitespace after `$1'",
+        "doc" : "記号の後にスペースが (1 つ以上) ある",
+        "param_types" : ["string"],
+        "param_doc" : ["記号"]
+    },
+
+
+    {
+        "category" : "style",
+        "num" : 211,
+        "type" : "Whitespace_beforeLParen",
+        "message" : "whitespace before `('",
+        "doc" : "`(' の前にスペースが (1 つ以上) ある"
+    },
+
+    {
+        "category" : "style",
+        "num" : 221,
+        "type" : "Multiple_whitespaces_before_op",
+        "param_types" : ["string"],
+        "message" : "multiple spaces before `$1'",
+        "doc" : "演算子の前にスペースが多い (2 つ以上)",
+        "param_doc" : ["演算子"]
+    },
+    {
+        "category" : "style",
+        "num" : 222,
+        "type" : "Multiple_whitespaces_after_op",
+        "param_types" : ["string"],
+        "message" : "multiple spaces after `$1'",
+        "doc" : "演算子の次にスペースが多い (2 つ以上)",
+        "param_doc" : ["演算子"]
+    },
+
+
+    {
+        "category" : "unimplemented",
+        "num" : 223,
+        "type" : "Tab_before_op",
+        "param_types" : ["string"],
+        "message" : " tab before `$1'",
+        "doc" : "演算子の前にタブがある",
+        "param_doc" : ["演算子"]
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 224,
+        "type" : "Tab_after_op",
+        "param_types" : ["string"],
+        "message" : " tab after `$1'",
+        "doc" : "演算子の次にタブがある",
+        "param_doc" : ["演算子"]
+    },
+
+
+    {
+        "category" : "style",
+        "num" : 225,
+        "type" : "Missing_whitespace_around_op",
+        "param_types" : ["string"],
+        "message" : "missing whitespace around `$1'",
+        "doc" : "演算子の前後にスペースがない",
+        "param_doc" : ["演算子"]
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 226,
+        "type" : "Missing_whitespace_around_arithmetic_op",
+        "param_types" : ["AstBinOp.t"],
+        "message" : "missing whitespace around `$1'",
+        "doc" : "算術演算子の前後にスペースがない",
+        "param_doc" : ["演算子"]
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 227,
+        "type" : "Missing_whitespace_around_bitwise_or_shift_op",
+        "param_types" : ["AstBinOp.t"],
+        "message" : "missing whitespace around `$1'",
+        "doc" : "ビット演算子の前後にスペースがない",
+        "param_doc" : ["演算子"]
+    },
+
+    {
+        "category" : "unimplemented",
+        "num" : 228,
+        "type" : "Missing_whitespace_around_modulo_op",
+        "message" : "missing whitespace around `%%'",
+        "doc" : "モジュロ演算子の前後にスペースがない"
+    },
+
+
+    {
+        "category" : "style",
+        "num" : 231,
+        "type" : "Missing_whitespace_after_comma",
+        "message" : "missing whitespace after comma",
+        "doc" : "`,' の次にスペースがない"
+    },
+    {
+        "category" : "style",
+        "num" : 232,
+        "type" : "Missing_whitespace_before_lparen",
+        "message" : "missing whitespace before `('",
+        "doc" : "`(' の前にスペースがない"
+    },
+    {
+        "category" : "style",
+        "num" : 233,
+        "type" : "Multiple_whitespaces_before_lparen",
+        "message" : "multiple spaces before `('",
+        "doc" : "`(' の前にスペースが多い (2 つ以上)"
+    },
+
+    {
+        "category" : "style",
+        "num" : 241,
+        "type" : "Multiple_whitespaces_after_comma",
+        "message" : "multiple spaces after comma",
+        "doc" : "`,' の次にスペースが多い (2 つ以上)"
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 242,
+        "type" : "Tab_after_comma",
+        "message" : "tab after comma",
+        "doc" : "`,' の次にタブがある"
+    },
+
+
+    {
+        "category" : "style",
+        "num" : 261,
+        "type" : "Missing_two_whitespaces_before_inline_comment",
+        "message" : "at least two spaces before inline comment",
+        "doc" : "インラインコメントの前に 2 文字分のスペースがない"
+    },
+    {
+        "category" : "style",
+        "num" : 262,
+        "type" : "Bad_start_of_inline_comment",
+        "message" : "inline comment should start with `-- '",
+        "doc" : "インラインコメントが `-- ' で始まっていない"
+    },
+    {
+        "category" : "style",
+        "num" : 265,
+        "type" : "Bad_start_of_block_comment",
+        "message" : "block comment should start with `-- '",
+        "doc" : "ブロックコメントが `-- ' で始まっていない"
+    },
+
+
+    {
+        "category" : "unimplemented",
+        "num" : 271,
+        "type" : "Multiple_whitespaces_after_keyword",
+        "param_types" : ["string"],
+        "message" : "multiple spaces after keyword",
+        "doc" : "キーワードの次にスペースが多い (2 つ以上)",
+        "param_doc" : ["キーワード"]
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 272,
+        "type" : "Multiple_whitespaces_before_keyword",
+        "param_types" : ["string"],
+        "message" : "multiple spaces before keyword",
+        "doc" : "キーワードの前にスペースが多い (2 つ以上)",
+        "param_doc" : ["キーワード"]
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 273,
+        "type" : "Tab_after_keyword",
+        "message" : "tab after keyword",
+        "doc" : "キーワードの次にタブがある"
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 274,
+        "type" : "Tab_before_keyword",
+        "message" : "tab before keyword",
+        "doc" : "キーワードの前にタブがある"
+    },
+
+
+
+    {
+        "category" : "style",
+        "num" : 281,
+        "type" : "Missing_whitespace_before_literal_arg",
+        "message" : "missing whitespace before literal argument",
+        "doc" : "リテラル引数 (文字列またはテーブル) の前にスペースがない"
+    },
+
+
+    {
+        "category" : "style",
+        "num" : 291,
+        "type" : "Trailing_whitespace",
+        "message" : "trailing whitespace",
+        "doc" : "行末にスペースが含まれている"
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 292,
+        "loglv" : "Warn",
+        "type" : "No_newline_at_end_of_file",
+        "message" : "no newline at end of file",
+        "doc" : "ファイル末尾に改行がない"
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 293,
+        "loglv" : "Warn",
+        "type" : "Blank_line_contains_whitespace",
+        "message" : "blank line contains whitespace",
+        "doc" : "空行にスペースが含まれている"
+    },
+
+
+
+
+    {
+        "category" : "unimplemented",
+        "num" : 301,
+        "loglv" : "Warn",
+        "type" : "Expected_one_blank_line",
+        "message" : "expected 1 blank line, found 0",
+        "doc" : "1 行の空行がない"
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 302,
+        "loglv" : "Warn",
+        "type" : "Expected_two_blank_lines",
+        "message" : "expected 2 blank lines, found 0",
+        "doc" : "2 行の空行がない"
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 303,
+        "loglv" : "Warn",
+        "type" : "Too_many_blank_lines",
+        "message" : "too many blank lines (3)",
+        "doc" : "空行が多い (3 行以上)"
+    },
+
+
+    {
+        "category" : "unimplemented",
+        "num" : 391,
+        "loglv" : "Warn",
+        "type" : "Blank_line_at_end_of_file",
+        "message" : "blank line at end of file",
+        "doc" : "ファイルの終端に空行がある"
+    },
+
+
+    {
+        "category" : "style",
+        "num" : 501,
+        "type" : "Line_too_long",
+        "param_types" : ["int", "int"],
+        "message" : "line too long ($1 > $2 characters)",
+        "doc" : "一行の文字数が規定より多い",
+        "param_doc" : ["該当行の文字数", "規定の文字数"]
+    },
+
+
+    {
+        "category" : "style",
+        "num" : 701,
+        "type" : "Stats_on_line",
+        "message" : "multiple statements on one line (keyword)",
+        "doc" : "一行に複数の文がある (制御構文のキーワード後)"
+    },
+    {
+        "category" : "style",
+        "num" : 702,
+        "type" : "Stats_on_line_by_semi_colon",
+        "message" : "multiple statements on one line (semicolon or space)",
+        "doc" : "一行に複数の文がある (セミコロンまたはスペース区切り)"
+    },
+    {
+        "category" : "style",
+        "num" : 703,
+        "type" : "Stat_ends_with_semi_colon",
+        "message" : "statement ends with a semicolon",
+        "doc" : "文がセミコロンで終わっている"
+    },
+
+
+    {
+        "category" : "style",
+        "num" : 901,
+        "type" : "Syntax_error",
+        "param_types" : ["string"],
+        "message" : "$1",
+        "doc" : "文法エラー",
+        "param_doc" : ["エラー内容"]
+    },
+    {
+        "category" : "style",
+        "num" : 911,
+        "type" : "Module_not_found",
+        "param_types" : ["string"],
+        "message" : "module `$1' not found",
+        "doc" : "モジュールを見つけられなかった",
+        "param_doc" : ["モジュール名"]
+    },
+    {
+        "category" : "style",
+        "num" : 912,
+        "type" : "Syntax_error_in_module",
+        "param_types" : ["string"],
+        "message" : "syntax error in module `$1'",
+        "doc" : "モジュールに文法エラーがある",
+        "param_doc" : ["モジュール名"]
+    },
+    {
+        "category" : "style",
+        "num" : 913,
+        "type" : "Cyclic_load",
+        "param_types" : ["string"],
+        "message" : "cyclic loading module `$1'",
+        "doc" : "モジュールのロードが循環している",
+        "param_doc" : ["モジュール名"]
+    },
+
+
+    {
+        "category" : "analysis",
+        "num" : 1101,
+        "loglv" : "Error",
+        "type" : "Directive_error",
+        "param_types" : ["string"],
+        "message" : "$1",
+        "doc" : "ディレクティブエラー",
+        "param_doc" : ["エラー内容"]
+    },
+
+
+    {
+        "category" : "analysis",
+        "num" : 1201,
+        "type" : "Unused_var",
+        "param_types" : ["string"],
+        "message" : "unused variable `$1'",
+        "doc" : "未使用の変数",
+        "param_doc" : ["変数名"]
+    },
+    {
+        "category" : "analysis",
+        "num" : 1202,
+        "type" : "Unassigned_var",
+        "param_types" : ["string"],
+        "message" : "unassigned variable `$1'",
+        "doc" : "未代入の変数",
+        "param_doc" : ["変数名"]
+    },
+    {
+        "category" : "analysis",
+        "num" : 1202,
+        "type" : "Unassigned_var_with_suggestion",
+        "param_types" : ["string", "string"],
+        "message" : "unassigned variable `$1' (did you mean `$2'?)",
+        "doc" : "未代入の変数 (候補つき)",
+        "param_doc" : ["変数名", "候補の変数名"]
+    },
+    {
+        "category" : "analysis",
+        "num" : 1211,
+        "type" : "Local_var_hides_outer_local_var",
+        "param_types" : ["string", "int"],
+        "message" : "local variable `$1' hides outer local variable (defined at line $2)",
+        "doc" : "ローカル変数が外側スコープのローカル変数を隠している",
+        "param_doc" : ["変数名", "行番号"]
+    },
+    {
+        "category" : "analysis",
+        "num" : 1211,
+        "type" : "Local_var_hides_global_var",
+        "param_types" : ["string", "string", "int"],
+        "message" : "local variable `$1' hides global variable (defined at file `$2', line $3)",
+        "doc" : "ローカル変数がグローバル変数を隠している",
+        "param_doc" : ["変数名", "ファイル名", "行番号"]
+    },
+    {
+        "category" : "analysis",
+        "num" : 1211,
+        "type" : "Local_var_hides_embedded_var",
+        "param_types" : ["string"],
+        "message" : "local variable `$1' hides embedded variable",
+        "doc" : "ローカル変数が組み込み変数を隠している",
+        "param_doc" : ["変数名"]
+    },
+    {
+        "category" : "analysis",
+        "num" : 1212,
+        "type" : "Local_var_exists",
+        "param_types" : ["string"],
+        "message" : "redefinition local variable of `$1'",
+        "doc" : "同名のローカル変数が同一スコープで定義されている",
+        "param_doc" : ["変数名"]
+    },
+    {
+        "category" : "analysis",
+        "num" : 1213,
+        "type" : "Global_var_def",
+        "param_types" : ["string"],
+        "message" : "global variable definition `$1'",
+        "doc" : "グローバル変数が定義されている",
+        "param_doc" : ["変数名"]
+    },
+    {
+        "category" : "analysis",
+        "num" : 1213,
+        "type" : "Global_func_def",
+        "param_types" : ["string"],
+        "message" : "global function definition `$1'",
+        "doc" : "グローバル関数が定義されている",
+        "param_doc" : ["関数名"]
+    },
+    {
+        "category" : "analysis",
+        "num" : 1221,
+        "type" : "Init_assign_to_anon_func",
+        "message" : "assign initial value to anonymous function",
+        "doc" : "ローカル変数の初期値に匿名関数を代入している (多重代入時、右辺の要素数が左辺よりも多い場合)"
+    },
+    {
+        "category" : "analysis",
+        "num" : 1222,
+        "type" : "Init_assign_to_anon_func_with_name",
+        "param_types" : ["string"],
+        "message" : "assign `$1' to anonymous function",
+        "doc" : "ローカル変数の初期値に匿名関数を代入している",
+        "param_doc" : ["ローカル変数名"]
+    },
+    {
+        "category" : "analysis",
+        "num" : 1223,
+        "type" : "Reassign_global_var",
+        "param_types" : ["string"],
+        "message" : "already initialized as global variable `$1'",
+        "doc" : "他のライブラリで初期化済みのグローバル変数に再代入している",
+        "param_doc" : ["変数名"]
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 1231,
+        "type" : "Unassigned_field_with_suggestion",
+        "param_types" : ["string", "string"],
+        "message" : "unassigned field `$1' (did you mean `$2'?)",
+        "doc" : "未代入のフィールド (候補つき)",
+        "param_doc" : ["フィールド名", "候補のフィールド名"]
+    },
+
+
+
+    {
+        "category" : "analysis",
+        "num" : 1301,
+        "type" : "Not_snake_case",
+        "param_types" : ["string"],
+        "message" : "identifier `$1' is not in snake case",
+        "doc" : "識別子が snake case ではない",
+        "param_doc" : ["識別子名"]
+    },
+    {
+        "category" : "unimplemented",
+        "num" : 1302,
+        "type" : "Not_camel_case",
+        "param_types" : ["string"],
+        "message" : "identifier `$1' is not in camel case",
+        "doc" : "識別子が camel case ではない",
+        "param_doc" : ["識別子名"]
+    },
+
+
+    {
+        "category" : "analysis",
+        "num" : 1501,
+        "type" : "Invalid_arity",
+        "param_types" : ["int", "int"],
+        "message" : "expected $1 arguments, got $2",
+        "doc" : "引数の数が異なる",
+        "param_doc" : ["期待される引数の数", "与えた引数の数"]
+    },
+    {
+        "category" : "analysis",
+        "num" : 1502,
+        "type" : "Invalid_type",
+        "param_types" : ["int", "string", "string"],
+        "message" : "bad argument #$1 expected $2, got $3",
+        "doc" : "引数の型が異なる",
+        "param_doc" : ["引数の位置", "期待される引数の型", "与えた引数の型"]
+    },
+    {
+        "category" : "analysis",
+        "num" : 1511,
+        "type" : "Concat_to_cast",
+        "message" : "use `tostring()' to cast without concatenation",
+        "doc" : "文字列キャストのために結合を利用している (空の文字列を結合している)"
+    },
+    {
+        "category" : "analysis",
+        "num" : 1512,
+        "type" : "Element_zero",
+        "message" : "use of element 0 for array-like table access",
+        "doc" : "配列 (テーブル) のインデックス 0 の要素にアクセスしている"
+    },
+
+
+    {
+        "category" : "analysis",
+        "num" : 1601,
+        "type" : "Dead_block",
+        "message" : "block may never be used",
+        "doc" : "実行されないブロック"
+    },
+    {
+        "category" : "analysis",
+        "num" : 1602,
+        "type" : "Meaningless_condition",
+        "message" : "meaningless condition (block shall be run)",
+        "doc" : "意味のない条件式"
+    },
+
+    {
+        "category" : "analysis",
+        "num" : 1801,
+        "type" : "Double_quoted_string",
+        "message" : "double-quoted string not including single quotations",
+        "doc" : "シングルクオートを含まないダブルクオートの文字列リテラル"
+    },
+    {
+        "category" : "analysis",
+        "num" : 1802,
+        "type" : "Redundant_paren",
+        "message" : "redundant parenthesis",
+        "doc" : "不要な括弧"
+    }
+]

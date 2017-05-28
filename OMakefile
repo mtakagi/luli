@@ -1,0 +1,38 @@
+.PHONY: all install clean test unittest syntaxtest archive
+
+PROGRAM = luli
+VERSION = 1.0.0
+ARCHIVE_DIR = $(PROGRAM)-$(VERSION)
+ARCHIVE_FILES = $(PROGRAM) misc
+TARBALL = $(ARCHIVE_DIR).tar.gz
+LUA51_TESTS_DIR = test/lua5.1-tests
+LUA52_TESTS_DIR = test/lua-5.2.2-tests
+
+.SUBDIRS: src
+
+$(PROGRAM): src/$(PROGRAM)
+	cp src/$(PROGRAM) .
+
+archive: $(PROGRAM)
+	rm -rf $(ARCHIVE_DIR)
+	mkdir -p $(ARCHIVE_DIR)
+	cp -r $(ARCHIVE_FILES) $(ARCHIVE_DIR)
+	tar czf $(TARBALL) $(ARCHIVE_DIR)
+
+.DEFAULT: all
+
+clean:
+	rm -rf $(ARCHIVE_DIR) $(TARBALL) $(PROGRAM)
+
+unittest: $(PROGRAM)
+	cd src; python make_linterr_testdata.py
+	./test/run.sh $(absname $(PROGRAM))
+
+SYNTAX_TEST_FLAGS = -ignore E,W -no-autoload
+syntaxtest: $(PROGRAM)
+	foreach(path, $(ls $(LUA51_TESTS_DIR)/*.lua))
+	  ./$(PROGRAM) -lua-version 5.1 $(SYNTAX_TEST_FLAGS) $(path)
+	foreach(path, $(ls $(LUA52_TESTS_DIR)/*.lua))
+	  ./$(PROGRAM) $(SYNTAX_TEST_FLAGS) $(path)
+
+test: syntaxtest unittest

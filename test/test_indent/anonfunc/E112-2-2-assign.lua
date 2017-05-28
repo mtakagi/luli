@@ -1,0 +1,3 @@
+t = function ()
+ print()
+    end
